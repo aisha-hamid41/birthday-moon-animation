@@ -12,6 +12,7 @@ html {
 }
 
 body {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,6 +57,43 @@ body {
     animation: fade-in 2.5s ease-in-out forwards;
 }
 
+/* Floating images styling */
+.float-img {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 14px;
+    opacity: 0.88;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Scattered positions */
+.img1 {
+    top: 80px;
+    left: 80px;
+    animation-duration: 5s;
+}
+
+.img2 {
+    top: 90px;
+    right: 90px;
+    animation-duration: 6.5s;
+}
+
+.img3 {
+    bottom: 90px;
+    left: 90px;
+    animation-duration: 7s;
+}
+
+.img4 {
+    bottom: 100px;
+    right: 80px;
+    animation-duration: 5.8s;
+}
+
 @keyframes eclipse-animation {
     0%{
       box-shadow: none;
@@ -88,5 +126,22 @@ body {
     .moon {
         width: 160px;
         height: 160px;
+    }
+
+    .float-img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
